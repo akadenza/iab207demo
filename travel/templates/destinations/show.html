@@ -51,6 +51,8 @@
       {% for comment in destination.comments %}
       <div class="col-md-12">  
         <b>{{ comment.user.name }} <span class="ml-2 text-muted">January 2024</span></b>
+        <b class="ml-2 text-muted">{{comment.created_at.strftime("%B %d, %Y %H:%M")}}</b>
+
         <p>{{ comment.text }}</p>  
       </div> 
       {% endfor %} 
